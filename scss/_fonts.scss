@@ -91,6 +91,10 @@ $font-size-items: 50;
     (teal, $teal),
     (cyan, $cyan),
     (color-base, $color-base),
+    (color-base-2, $color-base-2),
+    (color-base-3, $color-base-3),
+    (color-base-4, $color-base-4),
+    (color-base-5, $color-base-5),
 {
   .color-#{$color-name} {
     color: $color;
