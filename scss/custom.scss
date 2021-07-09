@@ -32,9 +32,8 @@ start. header*/
 
 ::-webkit-scrollbar-thumb {
 	border-radius: 2px;
-	background: #000;
+	background: $color-base-5;
 }
-
 
 @media (max-width: $screen-xl-max) {
 }
@@ -72,32 +71,55 @@ start. footer*/
 /*--------------------------------
 start. content*/
 .body-bg {
-	background-color: #F0E9D7;
+	background-color: $color-base-4;
 }
 
+.header-tip {
+	background-color: $color-base-5;
+	background-image: url(../image/bg--1.png);
+	background-repeat: repeat-x;
+	background-position: center;
+	background-size: cover;
+	p {
+		font-size: $font-size-lg;
+		color: $white;
+		letter-spacing: 2px;
+		padding: 13px 30px;
+		span {
+			font-size: 30px;
+			vertical-align: text-bottom;
+			line-height: 1;
+		}
+	}
+}
 
 @media (max-width: $screen-xxxl-max) {
-
 }
 
 @media (max-width: $screen-xxl-max) {
-
 }
 
 @media (max-width: $screen-xl-max) {
-
 }
 
 @media (max-width: $screen-lg-max) {
-
 }
 
 @media (max-width: $screen-md-max) {
-
+	.header-tip {
+		p {
+			font-size: 14px;
+			letter-spacing: 1px;
+			padding: 6px 12px;
+			span {
+				font-size: 18px;
+				vertical-align: text-top;
+			}
+		}
+	}
 }
 
 @media (max-width: $screen-sm-max) {
-
 }
 
 /*end. content
