@@ -1,0 +1,104 @@
+@import "variables";
+@import "default-style";
+@import "grid";
+@import "fonts";
+@import "list-style";
+@import "positons";
+@import "flex";
+@import "paddingmargin";
+
+/*--------------------------------
+start. header*/
+
+::-webkit-scrollbar {
+	width: 4px;
+	background: #fff;
+	z-index: 10;
+}
+
+::-webkit-scrollbar:horizontal {
+	height: 4px;
+}
+
+@media (max-width: 480px) {
+	::-webkit-scrollbar {
+		width: 2px;
+	}
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background: #000;
+}
+
+
+@media (max-width: $screen-xl-max) {
+}
+
+@media (max-width: $screen-lg-max) {
+}
+
+@media (max-width: $screen-md-max) {
+}
+
+@media (max-width: $screen-sm-max) {
+}
+
+/*end. header
+--------------------------------*/
+
+/*--------------------------------
+start. footer*/
+
+@media (max-width: $screen-xl-max) {
+}
+
+@media (max-width: $screen-lg-max) {
+}
+
+@media (max-width: $screen-md-max) {
+}
+
+@media (max-width: $screen-sm-max) {
+}
+
+/*end. footer
+--------------------------------*/
+
+/*--------------------------------
+start. content*/
+.body-bg {
+	background-color: #F0E9D7;
+}
+
+
+@media (max-width: $screen-xxxl-max) {
+
+}
+
+@media (max-width: $screen-xxl-max) {
+
+}
+
+@media (max-width: $screen-xl-max) {
+
+}
+
+@media (max-width: $screen-lg-max) {
+
+}
+
+@media (max-width: $screen-md-max) {
+
+}
+
+@media (max-width: $screen-sm-max) {
+
+}
+
+/*end. content
+--------------------------------*/
