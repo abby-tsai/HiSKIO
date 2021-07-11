@@ -7426,7 +7426,7 @@ start. content*/
   .hotclass-section .tab-slider-box::after {
     background-image: url(../image/hotclass/couplets-y.svg);
     left: auto;
-    right: 11px;
+    right: 5px;
     top: 15px;
     background-size: 40px 102px;
     width: 40px;
@@ -7435,14 +7435,14 @@ start. content*/
   .hotclass-section .tab-slider-box::before {
     right: auto;
     left: 15px;
-    bottom: 20px;
+    bottom: 50px;
     background-size: 42px 82px;
     width: 42px;
     height: 82px;
   }
   .hotclass-section .tab-slider-box .class {
     max-width: 365px;
-    margin: 45px auto;
+    margin: 35px auto;
     padding: 15px;
   }
   .hotclass-section .tab-slider-box .class .content {
