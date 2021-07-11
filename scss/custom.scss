@@ -7,50 +7,15 @@
 @import "flex";
 @import "paddingmargin";
 
-/*--------------------------------
-start. header*/
-
 .w-100p {
 	width: 100%;
 }
-
-@media (max-width: $screen-xl-max) {
-}
-
-@media (max-width: $screen-lg-max) {
-}
-
-@media (max-width: $screen-md-max) {
-}
-
-@media (max-width: $screen-sm-max) {
-}
-
-/*end. header
---------------------------------*/
-
-/*--------------------------------
-start. footer*/
-
-@media (max-width: $screen-xl-max) {
-}
-
-@media (max-width: $screen-lg-max) {
-}
-
-@media (max-width: $screen-md-max) {
-}
-
-@media (max-width: $screen-sm-max) {
-}
-
-/*end. footer
---------------------------------*/
-
-/*--------------------------------
-start. content*/
 .body-bg {
 	background-color: $color-base-4;
+}
+
+button {
+	outline: none;
 }
 
 .title-sty1 {
@@ -169,6 +134,9 @@ footer {
 		opacity: 1;
 	}
 }
+
+/*--------------------------------
+start. content*/
 
 /* banner block */
 .header-tip {

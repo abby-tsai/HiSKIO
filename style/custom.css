@@ -5974,22 +5974,16 @@ ul,
   }
 }
 
-/*--------------------------------
-start. header*/
 .w-100p {
   width: 100%;
 }
 
-/*end. header
---------------------------------*/
-/*--------------------------------
-start. footer*/
-/*end. footer
---------------------------------*/
-/*--------------------------------
-start. content*/
 .body-bg {
   background-color: #F0E9D7;
+}
+
+button {
+  outline: none;
 }
 
 .title-sty1 {
@@ -6121,6 +6115,8 @@ footer {
   opacity: 1;
 }
 
+/*--------------------------------
+start. content*/
 /* banner block */
 .header-tip {
   background-color: #590B10;
