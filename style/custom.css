@@ -5982,7 +5982,7 @@ ul,
   background-color: #F0E9D7;
 }
 
-button {
+a, button, [role=button] {
   outline: none;
 }
 
