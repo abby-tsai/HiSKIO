@@ -6082,6 +6082,45 @@ footer {
   background-image: url(../image/slider/left.svg);
 }
 
+#scroll {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  background-color: #D95F3A;
+  border-radius: 100px;
+  text-indent: -9999px;
+  z-index: 1;
+  -webkit-border-radius: 100px;
+  -moz-border-radius: 100px;
+  -ms-border-radius: 100px;
+  -o-border-radius: 100px;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+}
+
+#scroll span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -8px;
+  margin-top: -12px;
+  height: 0;
+  width: 0;
+  border: 8px solid transparent;
+  border-bottom-color: #ffffff;
+}
+
+#scroll:hover {
+  background-color: #590B10;
+  opacity: 1;
+}
+
 /* banner block */
 .header-tip {
   background-color: #590B10;
@@ -6359,15 +6398,24 @@ footer {
 
 .hotclass-section .tab-slider-box .class .content .title {
   font-size: 60px;
-  margin: 0 0 25px;
   font-weight: 900;
-  line-height: 0.8;
+  line-height: 1;
+  margin: 0 0 15px;
   color: #fff;
 }
 
 .hotclass-section .tab-slider-box .class .content .title span {
   font-size: 30px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
+}
+
+.hotclass-section .tab-slider-box .class .content .sub-title {
+  font-size: 27px;
+  line-height: 1;
+  font-weight: 500;
+  margin: 0 0 25px;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
 .hotclass-section .tab-slider-box .class .content .teach {
@@ -6924,6 +6972,9 @@ footer {
   .hotclass-section .tab-slider-box .class .content .title span {
     font-size: 26px;
   }
+  .hotclass-section .tab-slider-box .class .content .sub-title {
+    font-size: 22px;
+  }
   .hotclass-section .tab-slider-box .class .content .price .big {
     font-size: 40px;
   }
@@ -6953,6 +7004,9 @@ footer {
 }
 
 @media (max-width: 991px) {
+  #scroll {
+    display: none !important;
+  }
   .envelope-block {
     max-width: 640px;
   }
@@ -7043,6 +7097,9 @@ footer {
     font-weight: 500;
   }
   .hotclass-section .tab-slider-box .class .content .title span {
+    font-size: 18px;
+  }
+  .hotclass-section .tab-slider-box .class .content .sub-title {
     font-size: 18px;
   }
   .hotclass-section .tab-slider-box .class .content .teach li {
@@ -7396,7 +7453,10 @@ footer {
     padding-bottom: 10px;
   }
   .hotclass-section .tab-slider-box .class .content .title {
-    margin: 0 0 12px;
+    margin: 0 0 10px;
+  }
+  .hotclass-section .tab-slider-box .class .content .sub-title {
+    margin: 0 0 10px;
   }
   .hotclass-section .tab-slider-box .class .content .teach li img {
     width: 22px;

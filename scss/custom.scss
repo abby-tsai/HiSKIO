@@ -133,6 +133,43 @@ footer {
 	}
 }
 
+#scroll {
+	position: fixed;
+	right: 10px;
+	bottom: 10px;
+	cursor: pointer;
+	width: 50px;
+	height: 50px;
+	background-color: $color-base;
+	border-radius: 100px;
+	text-indent: -9999px;
+	z-index: 1;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	transition: 0.3s ease;
+	-webkit-transition: 0.3s ease;
+	-moz-transition: 0.3s ease;
+	-ms-transition: 0.3s ease;
+	-o-transition: 0.3s ease;
+	span {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-left: -8px;
+		margin-top: -12px;
+		height: 0;
+		width: 0;
+		border: 8px solid transparent;
+		border-bottom-color: #ffffff;
+	}
+	&:hover {
+		background-color: $color-base-5;
+		opacity: 1;
+	}
+}
+
 /* banner block */
 .header-tip {
 	background-color: $color-base-5;
@@ -383,14 +420,22 @@ footer {
 			.content {
 				.title {
 					font-size: 60px;
-					margin: 0 0 25px;
 					font-weight: 900;
-					line-height: 0.8;
+					line-height: 1;
+					margin: 0 0 15px;
 					color: $white;
 					span {
 						font-size: 30px;
-						letter-spacing: 3px;
+						letter-spacing: 2px;
 					}
+				}
+				.sub-title {
+					font-size: 27px;
+					line-height: 1;
+					font-weight: 500;
+					margin: 0 0 25px;
+					letter-spacing: 2px;
+					color: $white;
 				}
 				.teach {
 					display: flex;
@@ -920,6 +965,9 @@ footer {
 							font-size: 26px;
 						}
 					}
+					.sub-title {
+						font-size: 22px;
+					}
 					.teach {
 						li {
 							img {
@@ -991,6 +1039,9 @@ footer {
 }
 
 @media (max-width: $screen-lg-max) {
+	#scroll {
+		display: none !important;
+	}
 	.envelope-block {
 		max-width: 640px;
 	}
@@ -1096,6 +1147,9 @@ footer {
 						span {
 							font-size: 18px;
 						}
+					}
+					.sub-title {
+						font-size: 18px;
 					}
 					.teach {
 						li {
@@ -1500,9 +1554,12 @@ footer {
 				.content {
 					padding-bottom: 10px;
 					.title {
-						margin: 0 0 12px;
+						margin: 0 0 10px;
 						span {
 						}
+					}
+					.sub-title {
+						margin: 0 0 10px;
 					}
 					.teach {
 						li {

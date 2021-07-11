@@ -1,4 +1,3 @@
-
 /* pre-3 Swiper */
 var swiper = new Swiper(".pre-3-slider", {
    slidesPerView: 3,
@@ -38,7 +37,7 @@ var swiper = new Swiper(".tab-thumbs", {
    watchSlidesProgress: true,
 });
 var swiper2 = new Swiper(".tab-slider", {
-   spaceBetween: 0,
+   spaceBetween: 10,
    loop: true,
    navigation: {
       nextEl: ".swiper-button-next",
@@ -47,4 +46,19 @@ var swiper2 = new Swiper(".tab-slider", {
    thumbs: {
       swiper: swiper,
    },
+});
+
+/* back to top */
+$(document).ready(function () {
+   $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+         $('#scroll').fadeIn();
+      } else {
+         $('#scroll').fadeOut();
+      }
+   });
+   $('#scroll').click(function () {
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      return false;
+   });
 });
