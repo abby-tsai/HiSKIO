@@ -38,7 +38,8 @@ var swiper = new Swiper(".tab-thumbs", {
    watchSlidesProgress: true,
 });
 var swiper2 = new Swiper(".tab-slider", {
-   spaceBetween: 10,
+   spaceBetween: 0,
+   loop: true,
    navigation: {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",

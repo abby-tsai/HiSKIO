@@ -337,8 +337,35 @@ footer {
 		}
 	}
 	.tab-slider-box {
-		// max-width: 960px;
-		// margin: 0 auto;
+		position: relative;
+		&::after,
+		&::before {
+			content: "";
+			position: absolute;
+		}
+		&::after {
+			top: 14px;
+			left: 60px;
+			background-image: url(../image/hotclass/couplets-x.svg);
+			background-size: 278px 103px;
+			background-repeat: no-repeat;
+			width: 278px;
+			height: 103px;
+			z-index: 1;
+		}
+		&::before {
+			bottom: 10px;
+			right: calc(50% - 680px);
+			background-image: url(../image/hotclass/firecracker.svg);
+			background-size: 84px 165px;
+			background-repeat: no-repeat;
+			width: 84px;
+			height: 165px;
+			z-index: 1;
+		}
+		.swiper-container {
+			z-index: 0;
+		}
 		.swiper-slide {
 			overflow: hidden;
 			padding-bottom: 30px;
@@ -346,9 +373,10 @@ footer {
 		.class {
 			padding: 20px 30px;
 			background-color: #be9360;
-			margin: 30px auto 70px;
+			margin: 50px auto 70px;
 			max-width: 960px;
 			position: relative;
+			z-index: 0;
 			&:last-child {
 				margin-bottom: 0;
 			}
@@ -450,6 +478,48 @@ footer {
 					width: 100%;
 					height: 100%;
 					background-color: #be9360;
+					z-index: -1;
+				}
+				.logo {
+					z-index: -1;
+					position: absolute;
+					background-repeat: no-repeat;
+					&.logo-vue {
+						top: 0;
+						left: -140px;
+						width: 267px;
+						height: 210px;
+						background-image: url(../image/hotclass/logo-vue.svg);
+						background-size: 267px 230px;
+						background-position: center bottom;
+					}
+					&.logo-wordpress {
+						top: 0;
+						left: -150px;
+						width: 230px;
+						height: 160px;
+						background-image: url(../image/hotclass/logo-wordpress.svg);
+						background-size: 230px 230px;
+						background-position: center bottom;
+					}
+					&.logo-dj {
+						top: 0;
+						left: -200px;
+						width: 260px;
+						height: 170px;
+						background-image: url(../image/hotclass/logo-dj.svg);
+						background-size: 260px 170px;
+						background-position: center bottom;
+					}
+					&.logo-aws {
+						top: 0;
+						left: -160px;
+						width: 215px;
+						height: 198px;
+						background-image: url(../image/hotclass/logo-aws.svg);
+						background-size: 215px 235px;
+						background-position: center bottom;
+					}
 				}
 				.content {
 					padding-left: 60px;
@@ -467,6 +537,44 @@ footer {
 					width: 100%;
 					height: 100%;
 					background-color: #be9360;
+					z-index: -1;
+				}
+				.logo {
+					z-index: -1;
+					position: absolute;
+					background-repeat: no-repeat;
+					&.logo-react {
+						bottom: 0;
+						right: -120px;
+						width: 330px;
+						height: 150px;
+						background-image: url(../image/hotclass/logo-react.svg);
+						background-size: 330px 300px;
+					}
+					&.logo-js {
+						bottom: 0;
+						right: -80px;
+						width: 196px;
+						height: 150px;
+						background-image: url(../image/hotclass/logo-js.svg);
+						background-size: 196px 196px;
+					}
+					&.logo-node {
+						bottom: 0;
+						right: -80px;
+						width: 238px;
+						height: 220px;
+						background-image: url(../image/hotclass/logo-node.svg);
+						background-size: 238px 238px;
+					}
+					&.logo-k8s {
+						bottom: 0;
+						right: -80px;
+						width: 243px;
+						height: 154px;
+						background-image: url(../image/hotclass/logo-k8s.svg);
+						background-size: 243px 237px;
+					}
 				}
 				.evaluate {
 					margin-right: 40px;
@@ -706,6 +814,22 @@ footer {
 }
 
 @media (max-width: $screen-xxl-max) {
+	.hotclass-section {
+		.tab-slider-box {
+			&::after {
+				left: 20px;
+				background-size: 230px 85px;
+				width: 230px;
+				height: 85px;
+			}
+			&::before {
+				right: 20px;
+				background-size: 60px 120px;
+				width: 60px;
+				height: 120px;
+			}
+		}
+	}
 }
 
 @media (max-width: $screen-xl-max) {
@@ -792,7 +916,6 @@ footer {
 				.content {
 					.title {
 						font-size: 40px;
-						line-height: 1;
 						span {
 							font-size: 26px;
 						}
@@ -950,6 +1073,19 @@ footer {
 			}
 		}
 		.tab-slider-box {
+			&::after {
+				left: 10px;
+				top: 16px;
+				background-size: 154px 57px;
+				width: 154px;
+				height: 57px;
+			}
+			&::before {
+				bottom: 40px;
+				background-size: 32px 62px;
+				width: 32px;
+				height: 62px;
+			}
 			.class {
 				max-width: 530px;
 				margin: 45px auto;
@@ -975,6 +1111,7 @@ footer {
 					}
 					.price {
 						font-size: 16px;
+						line-height: 1;
 						del {
 							font-size: 16px;
 						}
@@ -984,10 +1121,16 @@ footer {
 					}
 				}
 				.evaluate {
-					padding: 18px;
+					padding: 5px 18px 18px;
+					.star {
+						img {
+							width: 75px;
+						}
+					}
 					.desc {
 						p {
 							font-size: 16px;
+							margin-top: 0;
 						}
 					}
 					.button {
@@ -1007,6 +1150,31 @@ footer {
 				}
 				&.class-left {
 					padding: 12px 16px 12px 0;
+					.logo {
+						&.logo-vue {
+							width: 156px;
+							height: 120px;
+							background-size: 156px 134px;
+						}
+						&.logo-wordpress {
+							left: -140px;
+							width: 130px;
+							height: 90px;
+							background-size: 130px 130px;
+						}
+						&.logo-dj {
+							background-size: 130px 85px;
+							width: 130px;
+							height: 85px;
+							left: -145px;
+						}
+						&.logo-aws {
+							background-size: 130px 150px;
+							width: 130px;
+							height: 125px;
+							left: -130px;
+						}
+					}
 					.content {
 						padding-left: 0;
 					}
@@ -1016,6 +1184,31 @@ footer {
 				}
 				&.class-right {
 					padding: 12px 0 12px 16px;
+					.logo {
+						&.logo-react {
+							width: 154px;
+							height: 70px;
+							background-size: 154px 139px;
+							right: -100px;
+						}
+						&.logo-js {
+							width: 110px;
+							height: 85px;
+							background-size: 110px 110px;
+							right: -90px;
+						}
+						&.logo-node {
+							background-size: 130px 130px;
+							width: 130px;
+							height: 115px;
+						}
+						&.logo-k8s {
+							background-size: 130px 120px;
+							width: 130px;
+							height: 80px;
+							right: -100px;
+						}
+					}
 					.evaluate {
 						margin-right: 10px;
 					}
@@ -1283,6 +1476,23 @@ footer {
 			}
 		}
 		.tab-slider-box {
+			&::after {
+				background-image: url(../image/hotclass/couplets-y.svg);
+				left: auto;
+				right: 11px;
+				top: 15px;
+				background-size: 40px 102px;
+				width: 40px;
+				height: 102px;
+			}
+			&::before {
+				right: auto;
+				left: 15px;
+				bottom: 20px;
+				background-size: 42px 82px;
+				width: 42px;
+				height: 82px;
+			}
 			.class {
 				max-width: 365px;
 				margin: 45px auto;
@@ -1326,6 +1536,32 @@ footer {
 				&.class-left {
 					margin-top: 15px;
 					padding: 15px 20px;
+					.logo {
+						&.logo-vue {
+							width: 70px;
+							height: 53px;
+							background-size: 70px 60px;
+							left: -45px;
+						}
+						&.logo-wordpress {
+							width: 70px;
+							height: 40px;
+							background-size: 70px 60px;
+							left: -45px;
+						}
+						&.logo-dj {
+							background-size: 60px;
+							width: 60px;
+							left: -40px;
+							height: 40px;
+						}
+						&.logo-aws {
+							background-size: 60px;
+							width: 60px;
+							left: -40px;
+							height: 60px;
+						}
+					}
 					.content {
 						padding-left: 0;
 					}
@@ -1335,6 +1571,43 @@ footer {
 				}
 				&.class-right {
 					padding: 15px 0 15px 50px;
+					.logo {
+						&.logo-react {
+							background-position: center bottom;
+							background-size: 100px;
+							width: 100px;
+							height: 55px;
+							right: -50px;
+							bottom: auto;
+							top: 0;
+						}
+						&.logo-js {
+							background-size: 60px;
+							width: 60px;
+							height: 60px;
+							right: -10px;
+							bottom: auto;
+							top: 0;
+						}
+						&.logo-node {
+							right: -30px;
+							bottom: auto;
+							top: 0;
+							width: 70px;
+							height: 70px;
+							background-size: 70px;
+							background-position: center bottom;
+						}
+						&.logo-k8s {
+							right: -50px;
+							bottom: auto;
+							top: 0;
+							width: 80px;
+							height: 80px;
+							background-size: 80px;
+							background-position: center bottom;
+						}
+					}
 					.evaluate {
 						margin-right: 0;
 					}

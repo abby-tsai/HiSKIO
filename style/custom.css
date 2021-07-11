@@ -6304,6 +6304,41 @@ footer {
   background-color: #F1C74F;
 }
 
+.hotclass-section .tab-slider-box {
+  position: relative;
+}
+
+.hotclass-section .tab-slider-box::after, .hotclass-section .tab-slider-box::before {
+  content: "";
+  position: absolute;
+}
+
+.hotclass-section .tab-slider-box::after {
+  top: 14px;
+  left: 60px;
+  background-image: url(../image/hotclass/couplets-x.svg);
+  background-size: 278px 103px;
+  background-repeat: no-repeat;
+  width: 278px;
+  height: 103px;
+  z-index: 1;
+}
+
+.hotclass-section .tab-slider-box::before {
+  bottom: 10px;
+  right: calc(50% - 680px);
+  background-image: url(../image/hotclass/firecracker.svg);
+  background-size: 84px 165px;
+  background-repeat: no-repeat;
+  width: 84px;
+  height: 165px;
+  z-index: 1;
+}
+
+.hotclass-section .tab-slider-box .swiper-container {
+  z-index: 0;
+}
+
 .hotclass-section .tab-slider-box .swiper-slide {
   overflow: hidden;
   padding-bottom: 30px;
@@ -6312,9 +6347,10 @@ footer {
 .hotclass-section .tab-slider-box .class {
   padding: 20px 30px;
   background-color: #be9360;
-  margin: 30px auto 70px;
+  margin: 50px auto 70px;
   max-width: 960px;
   position: relative;
+  z-index: 0;
 }
 
 .hotclass-section .tab-slider-box .class:last-child {
@@ -6440,6 +6476,53 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #be9360;
+  z-index: -1;
+}
+
+.hotclass-section .tab-slider-box .class.class-left .logo {
+  z-index: -1;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.hotclass-section .tab-slider-box .class.class-left .logo.logo-vue {
+  top: 0;
+  left: -140px;
+  width: 267px;
+  height: 210px;
+  background-image: url(../image/hotclass/logo-vue.svg);
+  background-size: 267px 230px;
+  background-position: center bottom;
+}
+
+.hotclass-section .tab-slider-box .class.class-left .logo.logo-wordpress {
+  top: 0;
+  left: -150px;
+  width: 230px;
+  height: 160px;
+  background-image: url(../image/hotclass/logo-wordpress.svg);
+  background-size: 230px 230px;
+  background-position: center bottom;
+}
+
+.hotclass-section .tab-slider-box .class.class-left .logo.logo-dj {
+  top: 0;
+  left: -200px;
+  width: 260px;
+  height: 170px;
+  background-image: url(../image/hotclass/logo-dj.svg);
+  background-size: 260px 170px;
+  background-position: center bottom;
+}
+
+.hotclass-section .tab-slider-box .class.class-left .logo.logo-aws {
+  top: 0;
+  left: -160px;
+  width: 215px;
+  height: 198px;
+  background-image: url(../image/hotclass/logo-aws.svg);
+  background-size: 215px 235px;
+  background-position: center bottom;
 }
 
 .hotclass-section .tab-slider-box .class.class-left .content {
@@ -6458,6 +6541,49 @@ footer {
   width: 100%;
   height: 100%;
   background-color: #be9360;
+  z-index: -1;
+}
+
+.hotclass-section .tab-slider-box .class.class-right .logo {
+  z-index: -1;
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.hotclass-section .tab-slider-box .class.class-right .logo.logo-react {
+  bottom: 0;
+  right: -120px;
+  width: 330px;
+  height: 150px;
+  background-image: url(../image/hotclass/logo-react.svg);
+  background-size: 330px 300px;
+}
+
+.hotclass-section .tab-slider-box .class.class-right .logo.logo-js {
+  bottom: 0;
+  right: -80px;
+  width: 196px;
+  height: 150px;
+  background-image: url(../image/hotclass/logo-js.svg);
+  background-size: 196px 196px;
+}
+
+.hotclass-section .tab-slider-box .class.class-right .logo.logo-node {
+  bottom: 0;
+  right: -80px;
+  width: 238px;
+  height: 220px;
+  background-image: url(../image/hotclass/logo-node.svg);
+  background-size: 238px 238px;
+}
+
+.hotclass-section .tab-slider-box .class.class-right .logo.logo-k8s {
+  bottom: 0;
+  right: -80px;
+  width: 243px;
+  height: 154px;
+  background-image: url(../image/hotclass/logo-k8s.svg);
+  background-size: 243px 237px;
 }
 
 .hotclass-section .tab-slider-box .class.class-right .evaluate {
@@ -6724,6 +6850,21 @@ footer {
   right: 150px;
 }
 
+@media (max-width: 1439px) {
+  .hotclass-section .tab-slider-box::after {
+    left: 20px;
+    background-size: 230px 85px;
+    width: 230px;
+    height: 85px;
+  }
+  .hotclass-section .tab-slider-box::before {
+    right: 20px;
+    background-size: 60px 120px;
+    width: 60px;
+    height: 120px;
+  }
+}
+
 @media (max-width: 1199px) {
   .envelope-block {
     max-width: 900px;
@@ -6779,7 +6920,6 @@ footer {
   }
   .hotclass-section .tab-slider-box .class .content .title {
     font-size: 40px;
-    line-height: 1;
   }
   .hotclass-section .tab-slider-box .class .content .title span {
     font-size: 26px;
@@ -6881,6 +7021,19 @@ footer {
     height: 40px;
     border-width: 1px;
   }
+  .hotclass-section .tab-slider-box::after {
+    left: 10px;
+    top: 16px;
+    background-size: 154px 57px;
+    width: 154px;
+    height: 57px;
+  }
+  .hotclass-section .tab-slider-box::before {
+    bottom: 40px;
+    background-size: 32px 62px;
+    width: 32px;
+    height: 62px;
+  }
   .hotclass-section .tab-slider-box .class {
     max-width: 530px;
     margin: 45px auto;
@@ -6904,6 +7057,7 @@ footer {
   }
   .hotclass-section .tab-slider-box .class .content .price {
     font-size: 16px;
+    line-height: 1;
   }
   .hotclass-section .tab-slider-box .class .content .price del {
     font-size: 16px;
@@ -6912,10 +7066,14 @@ footer {
     font-size: 26px;
   }
   .hotclass-section .tab-slider-box .class .evaluate {
-    padding: 18px;
+    padding: 5px 18px 18px;
+  }
+  .hotclass-section .tab-slider-box .class .evaluate .star img {
+    width: 75px;
   }
   .hotclass-section .tab-slider-box .class .evaluate .desc p {
     font-size: 16px;
+    margin-top: 0;
   }
   .hotclass-section .tab-slider-box .class .evaluate .button {
     bottom: -40px;
@@ -6934,6 +7092,29 @@ footer {
   .hotclass-section .tab-slider-box .class.class-left {
     padding: 12px 16px 12px 0;
   }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-vue {
+    width: 156px;
+    height: 120px;
+    background-size: 156px 134px;
+  }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-wordpress {
+    left: -140px;
+    width: 130px;
+    height: 90px;
+    background-size: 130px 130px;
+  }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-dj {
+    background-size: 130px 85px;
+    width: 130px;
+    height: 85px;
+    left: -145px;
+  }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-aws {
+    background-size: 130px 150px;
+    width: 130px;
+    height: 125px;
+    left: -130px;
+  }
   .hotclass-section .tab-slider-box .class.class-left .content {
     padding-left: 0;
   }
@@ -6942,6 +7123,29 @@ footer {
   }
   .hotclass-section .tab-slider-box .class.class-right {
     padding: 12px 0 12px 16px;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-react {
+    width: 154px;
+    height: 70px;
+    background-size: 154px 139px;
+    right: -100px;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-js {
+    width: 110px;
+    height: 85px;
+    background-size: 110px 110px;
+    right: -90px;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-node {
+    background-size: 130px 130px;
+    width: 130px;
+    height: 115px;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-k8s {
+    background-size: 130px 120px;
+    width: 130px;
+    height: 80px;
+    right: -100px;
   }
   .hotclass-section .tab-slider-box .class.class-right .evaluate {
     margin-right: 10px;
@@ -7166,6 +7370,23 @@ footer {
     height: 50px;
     border-width: 1px;
   }
+  .hotclass-section .tab-slider-box::after {
+    background-image: url(../image/hotclass/couplets-y.svg);
+    left: auto;
+    right: 11px;
+    top: 15px;
+    background-size: 40px 102px;
+    width: 40px;
+    height: 102px;
+  }
+  .hotclass-section .tab-slider-box::before {
+    right: auto;
+    left: 15px;
+    bottom: 20px;
+    background-size: 42px 82px;
+    width: 42px;
+    height: 82px;
+  }
   .hotclass-section .tab-slider-box .class {
     max-width: 365px;
     margin: 45px auto;
@@ -7185,6 +7406,30 @@ footer {
     margin-top: 15px;
     padding: 15px 20px;
   }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-vue {
+    width: 70px;
+    height: 53px;
+    background-size: 70px 60px;
+    left: -45px;
+  }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-wordpress {
+    width: 70px;
+    height: 40px;
+    background-size: 70px 60px;
+    left: -45px;
+  }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-dj {
+    background-size: 60px;
+    width: 60px;
+    left: -40px;
+    height: 40px;
+  }
+  .hotclass-section .tab-slider-box .class.class-left .logo.logo-aws {
+    background-size: 60px;
+    width: 60px;
+    left: -40px;
+    height: 60px;
+  }
   .hotclass-section .tab-slider-box .class.class-left .content {
     padding-left: 0;
   }
@@ -7193,6 +7438,41 @@ footer {
   }
   .hotclass-section .tab-slider-box .class.class-right {
     padding: 15px 0 15px 50px;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-react {
+    background-position: center bottom;
+    background-size: 100px;
+    width: 100px;
+    height: 55px;
+    right: -50px;
+    bottom: auto;
+    top: 0;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-js {
+    background-size: 60px;
+    width: 60px;
+    height: 60px;
+    right: -10px;
+    bottom: auto;
+    top: 0;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-node {
+    right: -30px;
+    bottom: auto;
+    top: 0;
+    width: 70px;
+    height: 70px;
+    background-size: 70px;
+    background-position: center bottom;
+  }
+  .hotclass-section .tab-slider-box .class.class-right .logo.logo-k8s {
+    right: -50px;
+    bottom: auto;
+    top: 0;
+    width: 80px;
+    height: 80px;
+    background-size: 80px;
+    background-position: center bottom;
   }
   .hotclass-section .tab-slider-box .class.class-right .evaluate {
     margin-right: 0;
